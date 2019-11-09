@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nutritional Information</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+    <style>
+      h1{
+        font-family:'Cairo';
+        color:#000004;
+        font-size:1200%
+        font-weight:bold;
+        margin-left:1%;
+      }
+      p{
+        font-family:'Montserrat';
+        color:#000000;
+        font-size:150%;
+        margin-left:2%;
+        margin-right:2%;
+
+      }
+      body{
+        background-color:#white;
+        color:white;
+        margin:0;
+      }
+      .box{
+        border-radius:3%;
+      }
+      .box{
+        font-size:150%;
+        transition-duration: 3s;
+      }
+      .topHead{
+        font-family:Cairo;
+        color:white;
+        height:20%;
+        font-size: 80px;
+        text-align: center;
+        display: inline-block;
+      }
+      .topBar{
+        width:100%;
+        border-radius:0px 0% 10% 10%;
+        background-color:#262626;
+        height:200px;
+        font-size:400%;
+        padding:3%;
+        text-align: center;
+      }
+      #topButton{
+        background-color: transparent;
+        color:#f5f5f5;
+        font-size:30px;
+        font-family:'Open Sans';
+        font-weight:100;
+        border-color:transparent;
+        positon:absolute;
+        margin-bottom:0px;
+        left:0px;
+        top:0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class='topBar'>
+      <h1 class = "topHead">Nutritional Information &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h1>
+      <button id="topButton" onclick="window.location.href='/../myapp/diseases'"><i class="material-icons" style="font-size:400%;">navigate_next</i><br>Diseases</u></button>
+    </div>
+    {% for h in headers %}{% for p in paragraphs %}
+    {% if forloop.counter == forloop.parentloop.counter %}
+    <div class = 'box'>
+        <h1>{{h}}</h1>
+        <p>{{p}}</p>
+        <br>
+        <hr style = 'margin-left:5%;margin-right:5%;'>
+        <br>
+    </div>
+    {% endif %}
+    {% endfor %}{% endfor %}
+  </div>
+  </body>
+</html>
